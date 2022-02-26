@@ -1,0 +1,40 @@
+using System;
+
+namespace bankacount
+
+{
+    class bankaccount
+    {
+        string owner;
+        int balance;
+        public bankaccount(string owner, int bal)
+        {
+            this.owner = owner;
+            this.balance = bal;
+        }
+        public int Ball
+        {
+            get { return this.balance; }
+        }
+        public void Deposit(int amount)
+        {
+            this.balance += amount;
+        }
+        public void withdraw(int amount)
+        {
+            this.balance -= amount;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bankaccount a = new bankaccount("naman ", 20000);
+            a.Deposit(20000);
+            a.withdraw(500);
+            Console.WriteLine(a.Ball);
+            Console.ReadLine();
+        }
+        
+    }
+}
